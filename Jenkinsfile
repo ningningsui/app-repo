@@ -1,4 +1,4 @@
-Gpipeline {
+pipeline {
     agent {
         label 'gitops-jenkins-jenkins-slave'
     }
