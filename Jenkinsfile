@@ -6,7 +6,6 @@ pipeline {
         stage('Get Source') {
             steps {
                 echo "1.Clone Repo Stage"
-		# git credentialsId: 'suiningning', url: 'https://github.com/ningningsui/app-repo'
 		git credentialsId: 'GitHubAccess', url: 'https://github.com/ningningsui/app-repo'
                 script {
                     build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
